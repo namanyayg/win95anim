@@ -47,6 +47,8 @@ a {
 	height: 6.25em;
 	background: deepskyblue;
 	float: left;
+
+	animation-timing-function: linear;
 }
 
 [class^="box"]:nth-child(odd) {
