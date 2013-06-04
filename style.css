@@ -1,0 +1,155 @@
+/*========================================
+
+Namanyay Goel
+www.namanyayg.com
+@namanyayg
+
+Win 95 Commercial (http://goo.gl/Bes8Z) 
+logo animation with pure CSS and HTML.
+
+Note: I'm using prefixfree, hence my CSS
+is without vendor prefixes.
+
+http://leaverou.github.io/prefixfree/
+
+
+
+PS. If you're wondering, yes, the page's
+design is intentional. I wanted a win95 
+feel throughout the page.
+
+========================================*/
+
+body {
+	background: #f8e8c3;
+	height: 100%;
+
+	font-family: Arial, sans-serif;
+	color: #444;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrap {
+	width: 13.25em;
+	margin: 0 auto;
+	padding-top: 2.5em;
+}
+
+[class^="box"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	width: 6.25em;
+	height: 6.25em;
+	background: deepskyblue;
+	float: left;
+
+	animation-timing-function: linear, linear;
+}
+
+[class^="box"]:nth-child(odd) {
+	margin-right: .75em;
+}
+
+[class^="box"]:nth-child(1), [class^="box"]:nth-child(2) {
+	margin-bottom: .75em;
+}
+
+
+/*** =BOX1 ***/
+
+	.box1 {
+		background: #de8520;
+		border: 2px dashed #de8520;
+
+		animation-name: blink, blink;
+		animation-duration: .5s, .5s;
+		animation-delay: 0s, 12s;
+		animation-iteration-count: 6, infinite;
+	}
+
+	@keyframes blink {
+		0% { background: #de8520; }
+		50% { background: #de8520; }
+
+		51% { background: transparent; }
+		100% { background: transparent; }
+	}
+
+
+/*** =BOX2 ***/
+
+	.box2 {
+		background: #8db270;
+
+		animation-name: expand, expand;
+		animation-duration: .3s, .3s;
+		animation-delay: 3s, 12s;
+		animation-iteration-count: 12, infinite;
+		animation-direction: alternate, alternate;
+	}
+
+	@keyframes expand {
+		from { transform: scale(1); }
+		to { transform: scale(.2); }
+	}
+
+/*** =BOX3 ***/
+
+	.box3 {
+		background: transparent;
+		border: 3.125em solid #5876bf;
+
+		animation-name: strange, strange;
+		animation-duration: .3s, .3s;
+		animation-delay: 9s, 12s;
+		animation-iteration-count: 8, infinite;
+	}
+
+	@keyframes strange {
+		from { border-width: 3.125em; transform: scale(.4); }
+		33% { border-width: 2.5em; }
+		66% { transform: scale(1); }
+		to { border-width: .5em; }
+	}
+
+
+/*** =BOX4 ***/
+
+	.box4 {
+		background: #f5c836;
+
+		animation-name: spinner, spinner;
+		animation-duration: .6s, .6s;
+		animation-delay: 6.6s, 12s;
+		animation-iteration-count: 4, infinite;
+
+		margin-bottom: 2.25em;
+	}
+
+	@keyframes spinner {
+		from { transform: rotateY(0deg); }
+    	to { transform: rotateY(359deg); }
+	}
+
+/*** =ARTICLE ***/
+
+article {
+	font-size: .75em;
+}
+
+article h1 {
+	font-size: 1.25em;
+	margin-bottom: 1.8em;
+	color: #222;
+}
+
+article h2 {
+	font-size: 1em;
+	margin: 1.5em 0 .75em;
+	color: #222;
+}
