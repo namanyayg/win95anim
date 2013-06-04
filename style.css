@@ -114,7 +114,7 @@ a {
 		background: #f5c836;
 		margin-bottom: 2.25em;
 
-		animation: spinner .6s infinite;
+		animation: spinner .6s linear infinite;
 	}
 
 	@keyframes spinner {
