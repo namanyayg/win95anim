@@ -47,8 +47,6 @@ a {
 	height: 6.25em;
 	background: deepskyblue;
 	float: left;
-
-	animation-timing-function: linear, linear;
 }
 
 [class^="box"]:nth-child(odd) {
@@ -65,11 +63,8 @@ a {
 	.box1 {
 		background: #de8520;
 		border: 2px dashed #de8520;
-
-		animation-name: blink, blink;
-		animation-duration: .5s, .5s;
-		animation-delay: 0s, 12s;
-		animation-iteration-count: 6, infinite;
+		
+		animation: blink .5s infinite;
 	}
 
 	@keyframes blink {
@@ -85,12 +80,8 @@ a {
 
 	.box2 {
 		background: #8db270;
-
-		animation-name: expand, expand;
-		animation-duration: .3s, .3s;
-		animation-delay: 3s, 12s;
-		animation-iteration-count: 12, infinite;
-		animation-direction: alternate, alternate;
+	
+		animation: expand .3s infinite alternate;
 	}
 
 	@keyframes expand {
@@ -104,10 +95,7 @@ a {
 		background: transparent;
 		border: 3.125em solid #5876bf;
 
-		animation-name: strange, strange;
-		animation-duration: .3s, .3s;
-		animation-delay: 9s, 12s;
-		animation-iteration-count: 8, infinite;
+		animation: strange .3s infinite;
 	}
 
 	@keyframes strange {
@@ -122,13 +110,9 @@ a {
 
 	.box4 {
 		background: #f5c836;
-
-		animation-name: spinner, spinner;
-		animation-duration: .6s, .6s;
-		animation-delay: 6.6s, 12s;
-		animation-iteration-count: 4, infinite;
-
 		margin-bottom: 2.25em;
+
+		animation: spinner .6s infinite;
 	}
 
 	@keyframes spinner {
